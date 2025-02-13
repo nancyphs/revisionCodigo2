@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Cambie el en por es -->
 
 <head>
   <meta charset="UTF-8">
@@ -8,33 +8,45 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
   <title>Formulario</title>
 </head>
+
 <body>
-  <h1>Bienvenidos a mi fiesta</h1>
-  <h2>Por favor, confirmar asistencia:</h2>
+  <header> <!-- Agregue header -->
+    <h1>Bienvenidos a mi fiesta</h1>
+  </header>
 
-  <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
-    <br />
-    Edad <input type="number" name="age" id="age">
-    <br />
+  <main> <!-- Agregue main como etiqueta semantica por que es el contenido principal-->
+    <section> <!-- Agregue section como etiqueta semantica -->
+      <h2>Por favor, confirmar asistencia:</h2>
+      <form class="formulario">
+        <fieldset> <!-- Agregue fieldset ya que nos permite agrupar por campos-->
+          <legend>Datos del invitado</legend> <!-- Va conjunto a fieldset, es su titulo -->
+          <label for="name">Nombre:</label>
+          <input type="text" name="name" id="name" required> <br><br>
+          <!-- Agregue un label, un required para el campo sea obligatorio y cambie <br /> es de cierre por <br> y agregue uno mas para que se visualice mejor  -->
 
-    Nacionalidad
-    <select name="nationality" id="nationality">
-      <option value="ar">Argentina</option>
-      <option value="mx">Mexicana</option>
-      <option value="per">Peruana</option>
-      <option value="vnzl">Venezolana</option>
-    </select>
-    <br />
-    <input type="submit">
-  </form>
+          <label for="age">Edad:</label>
+          <input type="number" name="age" id="age">
+          <br><br><!-- Agregue un label, un required para el campo sea obligatorio y cambie <br /> es de cierre por <br> y agregue uno mas para que se visualice mejor  -->
 
-  <div>
-    <h2>Lista de invitados</h2>
+          <label for="nationality">Nacionalidad:</label>
+          <select name="nationality" id="nationality">
+            <option value="ar">Argentina</option>
+            <option value="mx">Mexicana</option>
+            <option value="per">Peruana</option>
+            <option value="vnzl">Venezolana</option>
+          </select>
+          <br><br> <!-- Cambie <br /> es de cierre por <br> y agregue uno mas para que se visualice mejor-->
+          <input type="submit">
+        </fieldset>
+      </form>
+    </section>
 
-  </div>
+    <section> <!-- Agregue section como etiqueta semantica, se borraron los div -->
+      <h2>Lista de invitados</h2>
+    </section>
+  </main>
 
-  <script src="../formulario.js"></script>
+  <script src="./formulario.js"></script> <!-- Corregi la ruta -->
 </body>
 
 </html>
